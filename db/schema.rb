@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_11_05_024726) do
     t.string "in_a_relationship"
     t.string "occupation"
     t.string "previous_relationship"
+    t.string "about"
   end
 
   create_table "messages", force: :cascade do |t|

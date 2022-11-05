@@ -21,6 +21,7 @@ class CreateBios < ActiveRecord::Migration[6.1]
       t.string :in_a_relationship
       t.string :occupation
       t.string :previous_relationship
+      t.string :about
     end
   end
 end
