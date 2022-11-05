@@ -51,4 +51,12 @@ end
     about: about
   )
 end
+
+20.times do
+  user1 = Faker::Number.number
+  user2 = Faker::Number.number
+  message1 = Faker::Lorem.sentence
+  Message.create(user1_id: user1, user2_id: user2, message: message1)
+end
+
 puts "✅ Done seeding!"
