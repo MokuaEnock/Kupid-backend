@@ -18,7 +18,7 @@ user3 =
 
 bio1 =
   Bio.create(
-    name: Faker::Name,
+    name: Faker::Name.name,
     date_of_birth: Faker::Business.credit_card_expiry_date,
     gender: "Female",
     country: Faker::Address.country,
@@ -43,7 +43,7 @@ bio1 =
 
 bio2 =
   Bio.create(
-    name: Faker::Name,
+    name: Faker::Name.name,
     date_of_birth: Faker::Business.credit_card_expiry_date,
     gender: "Female",
     country: Faker::Address.country,
@@ -68,7 +68,7 @@ bio2 =
 
 bio3 =
   Bio.create(
-    name: Faker::Name,
+    name: Faker::Name.name,
     date_of_birth: Faker::Business.credit_card_expiry_date,
     gender: "Female",
     country: Faker::Address.country,
