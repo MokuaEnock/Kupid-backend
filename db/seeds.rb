@@ -1,56 +1,95 @@
 puts "🌱 Seeding spices..."
 
-# Seed your database here
-20.times do
-  email = Faker::Internet.email
-  password = Faker::Lorem.word
-  User.create(email: email, password: password)
-end
+#destroy seed data in db
+Bio.destroy_all
+Message.destroy_all
+User.destroy_all
 
-20.times do
-  name = Faker::Name
-  dob = Faker::Business.credit_card_expiry_date
-  gender = "Female"
-  country = Faker::Address.country
-  race = Faker::Lorem.word
-  height = Faker::Number.number
-  skin_color = Faker::Color.color_name
-  pets = Faker::Lorem.word
-  sexual_orientation = Faker::Lorem.word
-  smoker = "true"
-  drinker = "true"
-  religion = Faker::Lorem.word
-  body_type = Faker::Lorem.word
-  wants_kids = "true"
-  number_of_kids = Faker::Number.number
-  divorced = "true"
-  in_a_relationship = "true"
-  occupation = Faker::Lorem.word
-  previous_relationship = "true"
-  about = Faker::Lorem.sentence
+# Seed your database here
+
+user1 =
+  User.create(email: Faker::Internet.email, password: Faker::Internet.password)
+
+user2 =
+  User.create(email: Faker::Internet.email, password: Faker::Internet.password)
+
+user3 =
+  User.create(email: Faker::Internet.email, password: Faker::Internet.password)
+
+bio1 =
   Bio.create(
-    name: name,
-    date_of_birth: dob,
-    gender: gender,
-    country: country,
-    race: race,
-    height: height,
-    skin_color: skin_color,
-    pets: pets,
-    sexual_orientation: sexual_orientation,
-    smoker: smoker,
-    drinker: drinker,
-    religion: religion,
-    body_type: body_type,
-    wants_kids: wants_kids,
-    number_of_kids: number_of_kids,
-    divorced: divorced,
-    in_a_relationship: in_a_relationship,
-    occupation: occupation,
-    previous_relationship: previous_relationship,
-    about: about
+    name: Faker::Name,
+    date_of_birth: Faker::Business.credit_card_expiry_date,
+    gender: "Female",
+    country: Faker::Address.country,
+    race: Faker::Lorem.word,
+    height: Faker::Number.number,
+    skin_color: Faker::Color.color_name,
+    pets: Faker::Lorem.word,
+    sexual_orientation: Faker::Lorem.word,
+    smoker: "true",
+    drinker: "true",
+    religion: Faker::Lorem.word,
+    body_type: Faker::Lorem.word,
+    wants_kids: "true",
+    number_of_kids: Faker::Number.number,
+    divorced: "true",
+    in_a_relationship: "true",
+    occupation: Faker::Lorem.word,
+    previous_relationship: "true",
+    about: Faker::Lorem.sentence,
+    user_id: user1.id
   )
-end
+
+bio2 =
+  Bio.create(
+    name: Faker::Name,
+    date_of_birth: Faker::Business.credit_card_expiry_date,
+    gender: "Female",
+    country: Faker::Address.country,
+    race: Faker::Lorem.word,
+    height: Faker::Number.number,
+    skin_color: Faker::Color.color_name,
+    pets: Faker::Lorem.word,
+    sexual_orientation: Faker::Lorem.word,
+    smoker: "true",
+    drinker: "true",
+    religion: Faker::Lorem.word,
+    body_type: Faker::Lorem.word,
+    wants_kids: "true",
+    number_of_kids: Faker::Number.number,
+    divorced: "true",
+    in_a_relationship: "true",
+    occupation: Faker::Lorem.word,
+    previous_relationship: "true",
+    about: Faker::Lorem.sentence,
+    user_id: user2.id
+  )
+
+bio3 =
+  Bio.create(
+    name: Faker::Name,
+    date_of_birth: Faker::Business.credit_card_expiry_date,
+    gender: "Female",
+    country: Faker::Address.country,
+    race: Faker::Lorem.word,
+    height: Faker::Number.number,
+    skin_color: Faker::Color.color_name,
+    pets: Faker::Lorem.word,
+    sexual_orientation: Faker::Lorem.word,
+    smoker: "true",
+    drinker: "true",
+    religion: Faker::Lorem.word,
+    body_type: Faker::Lorem.word,
+    wants_kids: "true",
+    number_of_kids: Faker::Number.number,
+    divorced: "true",
+    in_a_relationship: "true",
+    occupation: Faker::Lorem.word,
+    previous_relationship: "true",
+    about: Faker::Lorem.sentence,
+    user_id: user3.id
+  )
 
 20.times do
   user1 = Faker::Number.number
