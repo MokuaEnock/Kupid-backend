@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_05_024726) do
+ActiveRecord::Schema.define(version: 2022_11_05_173022) do
 
   create_table "bios", force: :cascade do |t|
     t.string "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2022_11_05_024726) do
     t.string "occupation"
     t.string "previous_relationship"
     t.string "about"
+    t.integer "user_id"
   end
 
   create_table "messages", force: :cascade do |t|
